@@ -1,5 +1,4 @@
 import { RellaxWrapper } from 'react-rellax-wrapper'
-import { youTubeContent, youTubeLink } from '../../Content/variable'
 import ReactPlayer from 'react-player'
 import shape3 from '../../Images/shape3.png'
 import './youtube.scss'

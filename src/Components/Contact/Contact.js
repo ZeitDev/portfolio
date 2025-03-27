@@ -1,5 +1,5 @@
 import { RellaxWrapper } from 'react-rellax-wrapper'
-import { gitHubLink, linkedInLink, instaLink, youTubeLink } from '../../Content/variable'
+import { gitHubLink, linkedInLink } from '../../Content/variable'
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,7 +15,6 @@ const ContactSection = () => {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [number, setNumber] = useState('')
   const [mssg, setMssg] = useState('')
 
   const form = useRef();
@@ -29,7 +28,6 @@ const ContactSection = () => {
       )
     setName('')
     setEmail('')
-    setNumber('')
     setMssg('')
   };
 
@@ -39,14 +37,12 @@ const ContactSection = () => {
       <div className='content_col'>
         <RellaxWrapper speed={0} zIndex={0}>
           <div>
-            <h1 className='heading'>GET IN TOUCH</h1>
-            <p className='para'>Feel free to connect with me :)</p>
+            <h1 className='heading'>CONTACT</h1>
+            <p className='para'>contact@leonzeitler.com<br></br><br></br>Feel free to connect with me :)</p>
           </div>
           <div className='social_icons'>
             <a href={gitHubLink} target="_blank" rel="noreferrer"><i className="fab fa-github-square"></i></a>
             <a href={linkedInLink} target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-            <a href={instaLink} target="_blank" rel="noreferrer"><i className="fab fa-instagram-square"></i></a>
-            <a href={youTubeLink} target="_blank" rel="noreferrer"><i className="fab fab fa-youtube-square"></i></a>
           </div>
         </RellaxWrapper>
       </div>
@@ -54,9 +50,8 @@ const ContactSection = () => {
         <form onSubmit={sendEmail} ref={form}>
           <input name="user_name" value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Enter your name" />
           <input name="user_email" value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Enter your email" />
-          <input name="user_number" value={number} onChange={e => setNumber(e.target.value)} type="text" placeholder="Enter your phone number" />
           <textarea name="user_message" value={mssg} onChange={e => setMssg(e.target.value)} rows="4" placeholder="Enter message"></textarea>
-          <button type="submit" disabled={name==='' || email==='' || number==='' || mssg===''}>Submit</button>
+          <button type="submit" disabled={name==='' || email==='' || mssg===''}>Submit</button>
         </form>
       </div>
       <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar/>

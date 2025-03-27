@@ -10,7 +10,7 @@
         display: flex;
 
         &.row_1 {
-            align-items: center;
+            align-items: flex-start;
             @media (max-width:$s) {
                 flex-direction: column-reverse;
                 align-items: flex-end;
@@ -18,7 +18,8 @@
         }
         &.row_2 {
             align-items: flex-start;
-            margin-top: 10rem;
+            margin-top: 5rem;
+            margin-bottom: 10rem;
             @media (max-width:$l) {
                 margin-top: 5rem;
             }
@@ -30,7 +31,6 @@
             }
         }
 
-
         .desc_col {
             flex: 5;
             @media (max-width:$l) {
@@ -40,8 +40,10 @@
                 margin-bottom: 10px;
             }
             .proj_name {
+                align-self: auto;
                 font-size: 6rem;
                 color: #0000004d;
+                margin-bottom: 2rem;
                 @media (max-width:$xl) {
                     font-size: 5rem;
                 }
@@ -76,7 +78,8 @@
             }
         }
         .img_col {
-            flex: 3;
+            margin-top: 5rem;
+            flex: 5;
             @media (max-width:$l) {
                 flex: 1;
             }
@@ -88,14 +91,13 @@
             }
             .img_main {
                 width: auto;
-                height: 45rem;
-                filter: grayscale(100%);
+                height: 30rem;
                 @media (max-width:$s) {
-                    height: 30rem;
+                    height: 20rem;
                     width: auto;
                 }
                 @media (max-width:$xs) {
-                    height: 26rem;
+                    height: 15rem;
                 }
             }
         }
