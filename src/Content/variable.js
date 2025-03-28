@@ -2,7 +2,7 @@ import me from '../Images/me.png'
 import acs from '../Images/acs.PNG'
 import bachelorthesis from '../Images/bachelorthesis.png'
 import stenosis from '../Images/stenosis.png'
-import placeholder from '../Images/shape4.png'
+import cvguidedrobot from '../Images/cvguidedrobotic.png'
 
 export const menuItems = [
     {section:'#aboutme', text:'ABOUT'},
@@ -15,24 +15,24 @@ export const nameCapitals = "Léon Zeitler"
 export const roleCapitales = "SCIENTIST / ENGINEER / DEVELOPER"
 
 export const bioContent = [
-    "I am currently a Master's student in Biomedical Engineering Science at the Hamburg University of Technology and interested in Artifical Intelligence, Data Science, Extended Reality and Software Developement. In my free time, I go swimming and enjoy flight simulators.",
-    'I have in hand experience in Python, Deep Learning, Unreal Engine and Unity.'
+    "Currently pursuing a Master's degree in Biomedical Engineering Science at the Hamburg University of Technology, I have a strong interest in Artificial Intelligence, Data Science, Extended Reality, and Software Development. Outside of my studies, I enjoy swimming and flight simulators.",
+    'I have in hand experience in Deep Learning, Coding, Unreal Engine and Unity.'
 ]
 
 export const bioImage = me
 
 export const allSkills = [
-    {name:'Python', level:'expert'},
-    {name:'Deep Learning', level:'advanced'},
+    {name:'Coding', level:'advanced'},
+    {name:'Deep Learning', level:'expert'},
     {name:'Unreal Engine', level:'intermediate'},
     {name:'Unity', level:'basic'}
 ]
 
 export const allProjects = [
-    {name: "Aerial Camera Simulator", role: "Solo Developer", image: acs, desc: "A simulator for the 3D moving cable-suspended camera system, which is often used at sporting events such as soccer to provide a unique perspective. Controlling such systems requires a great deal of practice and coordination.", skillsArr: ["UNREAL ENGINE", "C++"], links: [{text: "View on App Store", href: ""}, {text: "View on Windows Store", href: ""}]},
-    {name: "CNN based Distance Prediction", role: "Bachelor Thesis", image: bachelorthesis, desc: "Training of Convolutional Neural Networks (CNN) to predict the distance between raw ultrasound slice images to later reconstruct previously not seen 3D structures in phantoms.", skillsArr: ["PYTHON", "PYTORCH", "ROBOTICS"], links: []},
-    {name: "CV guided Robotic Needle Placement", role: "Team Lead", image: placeholder, desc: "University project in which we did a simulated autonomous autopsy on a phantom using pointcloud registration, path and trajectory planning.", skillsArr: ["PYTHON", "OPENCV", "ROS", "ROBOTICS"], links: []},
-    {name: "Stenosis Analysis Software", role: " ", image: stenosis, desc: "University project in which we developed an application for the visualization and analysis of blood vessel constrictions.", skillsArr: ["PYTHON", "OPENCV", "ROS", "ROBOTICS"], links: []},
+    {name: "Aerial Camera Simulator", role: "Solo Developer", image: acs, desc: "Developed a simulator for the 3D moving cable-suspended camera system, commonly used at sporting events like soccer for unique perspectives. Mastering the control of these systems demands significant practice and coordination.", skillsArr: ["UNREAL ENGINE", "C++"], links: [{text: "View on App Store", href: ""}, {text: "View on Windows Store", href: ""}]},
+    {name: "CNN based Distance Prediction", role: "Bachelor Thesis", image: bachelorthesis, desc: "Trained Convolutional Neural Networks (CNNs) to estimate the distance between sequential raw ultrasound slice images to reconstruct previously unseen 3D structures in artificial tissue.", skillsArr: ["PYTHON", "PYTORCH", "ROBOTICS"], links: []},
+    {name: "CV guided Robotic Needle Placement", role: "Team Lead", image: cvguidedrobot, desc: "As the Team Lead for this university project, I guided our team in developing a system for simulated autonomous autopsy on a phantom. Our approach involved leveraging pointcloud registration along with low-level path and trajectory planning to guide robotic needle placement.", skillsArr: ["PYTHON", "OPENCV", "ROS", "ROBOTICS"], links: []},
+    {name: "Stenosis Analysis Software", role: " ", image: stenosis, desc: "University project where our team developed an application for the visualization and analysis of blood vessel constrictions (stenosis).", skillsArr: ["MATLAB"], links: []},
 ]
 
 export const linkedInLink = "https://www.linkedin.com/in/l%C3%A9on-zeitler/"

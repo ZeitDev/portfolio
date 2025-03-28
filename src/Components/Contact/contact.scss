@@ -44,18 +44,19 @@
         }
     }
     .content_col {
+
         flex: 2;
         margin-right: 1rem;
         @media (max-width:$s) {
             margin-left: 0;
         }
         .social_icons {
-            margin-top: 5rem;
+            margin-top: 0rem;
             @media (max-width:$s) {
                 margin-top: 0;
             }
             & > * {
-                font-size: 2.5rem;
+                font-size: 10rem;
                 margin: 10px;
                 color: #000;
                 &:hover {
@@ -65,59 +66,6 @@
                 @media (max-width:$s) {
                     font-size: 2rem;
                 }
-            }
-        }
-    }
-    .form_col {
-        flex: 3;
-        margin-left: 1rem;
-        @media (max-width:$s) {
-            margin-left: 0;
-            margin-top: 3rem;
-        }
-
-        input, textarea {
-            width: 96%;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 10px;
-            border: 1px #aaa solid;
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            &:focus {
-                outline: none;
-            }
-            @media (max-width:$s) {
-                font-size: 0.8rem;
-            }
-        }
-
-        button {
-            margin: 10px 5px;     
-            background-color: #111827;
-            border: 1px solid transparent;
-            border-radius: 10px;
-            color: #FFFFFF;
-            font-size: 1.125rem;
-            padding: 0.75rem 1.2rem;
-            transition: all 0.2s cubic-bezier(.4, 0, 0.2, 1);
-            width: 100%;
-            &:hover {
-                background-color: #374151;
-                cursor: pointer;
-            }
-            &:focus {
-                box-shadow: none;
-                outline: 2px solid transparent;
-                outline-offset: 2px;
-            }
-            &:disabled {
-                border: 2px solid #aaa;
-                background-color: #bbb;
-                color: #333;
-            }
-            @media (max-width:$s) {
-                font-size: 1rem;
             }
         }
     }
