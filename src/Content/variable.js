@@ -23,7 +23,7 @@ export const bioImage = me
 
 export const allSkills = [
     {name:'Coding', level:'advanced'},
-    {name:'Deep Learning', level:'expert'},
+    {name:'Deep Learning', level:'advanced'},
     {name:'Unreal Engine', level:'intermediate'},
     {name:'Unity', level:'basic'}
 ]
