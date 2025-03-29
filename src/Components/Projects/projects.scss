@@ -10,7 +10,9 @@
         display: flex;
 
         &.row_1 {
+            margin-bottom: 10rem;
             align-items: flex-start;
+
             @media (max-width:$s) {
                 flex-direction: column-reverse;
                 align-items: flex-end;
@@ -18,8 +20,7 @@
         }
         &.row_2 {
             align-items: flex-start;
-            margin-top: 15rem;
-            margin-bottom: 15rem;
+            margin-bottom: 10rem;
             @media (max-width:$l) {
                 margin-top: 5rem;
             }
@@ -92,6 +93,7 @@
             }*/
         }
         .img_col {
+            align-self: center;
             margin-top: 0rem;
             flex: 5;
             @media (max-width:$l) {

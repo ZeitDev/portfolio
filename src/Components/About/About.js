@@ -6,7 +6,7 @@ import './about.scss'
 const AboutSection = () => {
     return (
         <section id='aboutme' className='aboutme_section'>
-            <RellaxWrapper speed={-1.8} xs={1.8} mobile={1.8}>
+            <RellaxWrapper speed={-1.8} xs={0.5} mobile={0.5}>
                 <div className='content_col'>
                     <h1 className='heading'>ABOUT ME</h1>
                     {bioContent.map((i,k) => <p key={k} className='para'>{i}</p>)}
