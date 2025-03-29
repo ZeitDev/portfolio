@@ -1,6 +1,6 @@
 {
-  "name": "portfolio_parallax_theme",
-  "homepage": "http://zeitdev.github.io/portfolio",
+  "name": "portfolio",
+  "homepage": "https://www.leonzeitler.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
