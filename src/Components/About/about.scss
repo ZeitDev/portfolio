@@ -18,6 +18,9 @@
             height: 15rem;
             position: absolute;
             top: -200px;
+            @media (max-width:$xs) {
+                display: none;
+            }
         }
         .img_main {
             height: 30rem;
