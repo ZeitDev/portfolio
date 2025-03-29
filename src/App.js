@@ -1,11 +1,11 @@
 import { Layout, LegalNotice, PrivacyPolicy } from './Components'
 import './App.scss';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Layout />} />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/legalnotice" element={<LegalNotice />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
