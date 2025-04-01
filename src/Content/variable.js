@@ -12,7 +12,7 @@ export const menuItems = [
 ]
 
 export const nameCapitals = "Léon Zeitler"
-export const roleCapitales = "SCIENTIST / ENGINEER / DEVELOPER"
+export const roleCapitales = "ENGINEER / DEVELOPER"
 
 export const bioContent = [
     "Currently pursuing a Master's degree in Biomedical Engineering Science at the Hamburg University of Technology, I have a strong interest in Artificial Intelligence, Data Science, Extended Reality, and Software Development. Outside of my studies, I enjoy swimming and flight simulators.",
