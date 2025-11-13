@@ -15,24 +15,20 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "B.Sc. General Engineering Science",
+      school: "Hamburg University of Technology",
+      achievements: ['Bachelor Thesis: "CNN based depth estimation of 2D ultrasound slices." graded with 1.0 (A+)'],
+      skills: ["Mathematics", "Physics", "Chemistry", "Mechanics", "Electronics", "Computer Science"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Broad foundation in engineering principles, aquiring theoretical knowledge across multiple disciplines.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree: "M.Sc. Biomedical Engineering",
+      school: "Hamburg University of Technology",
+      achievements: ['Current Grade: 1.1 (A)', 'Master Thesis: "Simultaneous instrument segmentation and depth estimation for spatial scene understanding in robot-assisted surgery"'],
+      skills: ["Intelligent Systems in Medicine", "Robotic and Navigation in Medicine", "Humanoid Robotics", "Cell and Tissue Engineering", "Regenerative Medicine", "Medical Imaging"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Developed strong analytical and critical thinking skills with various practical projects.",
     },
   ];
 
@@ -104,7 +100,7 @@ const EducationSection = () => {
               <div className="space-y-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-3xl">{edu.mascot}</span>
+                    {/* <span className="text-3xl">{edu.mascot}</span> */}
                     <h3 className="text-2xl font-bold text-white">
                       {edu.degree}
                     </h3>
@@ -113,10 +109,10 @@ const EducationSection = () => {
                     <BookOpen className="w-5 h-5 text-teal-500" />
                     {edu.school}
                   </p>
-                  <p className="text-gray-400 flex items-center gap-2">
+                  {/* <p className="text-gray-400 flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     {edu.year}
-                  </p>
+                  </p> */}
                 </div>
 
                 <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">

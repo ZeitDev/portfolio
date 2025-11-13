@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail } from "lucide-react";
+import { Send, Phone, MapPin, Mail, Linkedin, Github, Instagram } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -53,7 +53,7 @@ export default function Contact() {
 
     // Create a new FormData object to send to Web3Forms API
     const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
+    form.append("access_key", "f5cf6627-afff-4c1f-bc96-48f9ab21bc45"); // Replace with your Web3Forms access key
     form.append("name", formData.name);
     form.append("email", formData.email);
     form.append("subject", formData.subject || "New Contact Form Submission");
@@ -91,9 +91,9 @@ export default function Contact() {
       className="pt-20 lg:pt-[0rem] bg-[#04081A]
  text-white min-h-screen"
     >
-      <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="hero min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex flex-col items-center">
+          <div className="relative text-center mb-16">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -101,35 +101,88 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop us a message!
+                  Feel free to connect with me!
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+              <div className="space-y-6 flex flex-col items-start w-full max-w-lg">
+                <div className="flex items-center space-x-4 w-full">
                   <div className="bg-purple-500/10 p-3 rounded-lg">
                     <Mail className="w-6 h-6 text-purple-400" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <p className="text-gray-400">
+                      <a
+                        href="mailto:contact@leonzeitler.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        contact@leonzeitler.com
+                      </a>
+                    </p>
                   </div>
                 </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-pink-500/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-pink-400" />
+                <div className="flex items-center space-x-4 w-full">
+                  <div className="bg-purple-500/10 p-3 rounded-lg">
+                    <Linkedin className="w-6 h-6 text-purple-400" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                  <div className="text-left">
+                    <h3 className="font-semibold">LinkedIn</h3>
+                    <p className="text-gray-400">
+                      <a
+                        href="https://www.linkedin.com/in/l%C3%A9on-zeitler"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        linkedin.com/in/l%C3%A9on-zeitler/
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 w-full">
+                  <div className="bg-purple-500/10 p-3 rounded-lg">
+                    <Github className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold">GitHub</h3>
+                    <p className="text-gray-400">
+                      <a
+                        href="https://github.com/ZeitDev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        github.com/ZeitDev
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 w-full">
+                  <div className="bg-purple-500/10 p-3 rounded-lg">
+                    <Instagram className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-semibold">Instagram</h3>
+                    <p className="text-gray-400">
+                      <a
+                        href="https://www.instagram.com/zeitler.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        instagram.com/zeitler.dev
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
+            {/* <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
@@ -216,7 +269,7 @@ export default function Contact() {
                 </button>
               </form>
 
-              {/* Status Message */}
+              {/* Status Message }
               {status && (
                 <div
                   className={`mt-4 text-center ${
@@ -228,7 +281,7 @@ export default function Contact() {
                   <p>{status}</p>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
