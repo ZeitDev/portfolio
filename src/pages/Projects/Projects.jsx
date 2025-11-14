@@ -8,9 +8,12 @@ import acsImage from "../../assets/images/acs.png";
 import bachelorImage from "../../assets/images/bachelorthesis.png";
 import cvguidedroboticImage from "../../assets/images/cvguidedrobotic.png";
 import stenosisImage from "../../assets/images/stenosis.png";
+import healthGemImage from "../../assets/images/HealthGem.png";
+import masterImage from "../../assets/images/frame228.png";
 
 const projects = [
 	{
+		status: "Active",
 		title: "Aerial Camera Simulator",
 		description:
 			"Developed a simulator for the 3D moving cable-suspended camera system, commonly used at sporting events like soccer for unique perspectives. Mastering the control of these systems demands significant practice and coordination in a very dynamic environment.",
@@ -21,31 +24,64 @@ const projects = [
 		],
 	},
 	{
-		title: "A sleek portfolio built with React and Tailwind CSS ",
+		status: "Active",
+		title: "Spatial Scene Understanding in robot-assisted Surgery",
 		description:
-			"A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-		src: bachelorImage,
+			"Developing a Multi-Teacher, Multi-Task deep learning framework to simultaneously perform surgical instrument segmentation and depth estimation of the scene.",
+		src: masterImage,
+		color: "#4cafb5", // Adjusted to a teal shade
+		links: [
+			//{ name: "Github", href: "https://github.com/ZeitDev/SIDE" },
+		],
+	},
+	{
+		status: "Finished",
+		title: "HealthGem - Personalized Medical Diary",
+		description:
+			"Record medical incidents intelligently to reveal long-term disease patterns or help physicians diagnose rare diseases with the power of the Gemma 3n LLM by Google.",
+		src: healthGemImage,
 		color: "#8f89ff",
 		links: [
-			{ name: "GitHub", href: "#" },
-			{ name: "Live Demo", href: "#" },
+			{ name: "Kaggle (Full Writeup)", href: "https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/healthgem-a-personalized-medical-diary" }
 		],
 	},
 	{
-		title: "🚀 MySocial",
+		status: "Finished",
+		title: "CNN based Depth Estimation",
 		description:
-			"A modern social media platform built with React and Tailwind CSS, offering real-time messaging, stories, sleek UI, and seamless user interaction to connect and share effortlessly! 📱✨",
-		src: cvguidedroboticImage,
-		color: "#fff",
+			"Trained Convolutional Neural Networks (CNNs) to estimate the depth between sequential raw 2D ultrasound slice images to reconstruct previously unseen 3D structures in artificial tissue.",
+		src: bachelorImage,
+		color: "#ff8c42", // Adjusted to a warm orange shade
 		links: [
-			{ name: "GitHub", href: "" },
-			{ name: "Live Demo", href: "" },
+
 		],
 	},
 	{
-		title: "CodeKori 🔥",
+		status: "Finished",
+		title: "Computer-Vision guided robotic Biopsy",
 		description:
-			"CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
+			"As the Lead for this university project, I guided our team in developing a system for simulated autonomous autopsy on a phantom. Our approach involved leveraging pointcloud registration along with low-level path and trajectory planning to guide the robotic needle placement.",
+		src: cvguidedroboticImage,
+		color: "#ffd700", // Adjusted to a golden yellow shade
+		links: [
+			{ name: "GitHub", href: "https://github.com/ZeitDev/cv_guided_needle_placement" }
+		],
+	},
+	{
+		status: "Finished",
+		title: "Full Body Tracking in Unity",
+		description:
+			"Built a real-time system in Unity that uses the Azure Kinect for full-body motion capture. This project focused on streaming the Kinect's skeletal data to drive a 3D avatar, enabling immersive virtual interactions.",
+		video: "https://www.youtube.com/embed/mLDMVa3GyyY?autoplay=1&mute=1&loop=1&playlist=mLDMVa3GyyY", // Added loop and playlist parameters
+		color: "#6a5acd", // Adjusted to a soft purple shade
+		links: [
+		],
+	},
+	{
+		status: "Finished",
+		title: "Stenosis Analysis Software",
+		description:
+			"University project where our team developed an application for the visualization and analysis of blood vessel constrictions (stenosis).",
 		src: stenosisImage,
 		color: "#ed649e",
 		links: [
@@ -62,7 +98,18 @@ export default function Projects() {
 		offset: ["start start", "end end"],
 	});
 
-	const indicatorOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]); // Fade out between 0% and 10% scroll progress
+	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.04, 0.12, 0.16,
+		 													0.18, 0.22, 0.3, 0.34,
+															0.36, 0.4, 0.48, 0.52,
+															0.54, 0.58, 0.66, 0.7,
+															0.72, 0.76, 0.84, 0.88,
+															0.9, 0.94, 1],
+															[1, 0, 0, 1,
+															1, 0, 0, 1,
+															1, 0, 0, 1,
+															1, 0, 0, 1,
+															1, 0, 0, 1, 
+															1, 0, 0]); // Added a fade-out range after the second card
 
 	useEffect(() => {
 		// Add specific styles for 1366x768 resolution
@@ -118,6 +165,7 @@ export default function Projects() {
 							<Card
 								key={`p_${i}`}
 								i={i}
+								status={project.status}
 								url={project.link}
 								title={project.title}
 								color={project.color}
@@ -127,12 +175,13 @@ export default function Projects() {
 								targetScale={targetScale}
 								links={project.links} // Pass links to Card
 								src={project.src} // Pass src to Card
+								video={project.video} // Pass video to Card
 							/>
 						);
 					})}
 				</section>
 				<motion.div
-					className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2"
+					className="sticky bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2"
 					style={{ opacity: indicatorOpacity }}
 				>
 					<span className="text-gray-400 flex items-center justify-center gap-2 -ml-20">
@@ -148,9 +197,11 @@ export default function Projects() {
 
 function Card({
 	i,
+	status,
 	title,
 	description,
 	src, // Use src for the image path
+	video, // Add video property
 	color,
 	progress,
 	range,
@@ -180,16 +231,27 @@ function Card({
 			>
 				{/* Modern split card design */}
 				<div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
-					{/* Image section - full width on mobile, 55% on desktop */}
+					{/* Media section - Render video or image */}
 					<div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
-						<motion.img
-							src={src} // Use the src property for the image
-							alt={title}
-							className="w-full h-full object-contain" // Updated to use object-contain
-							initial={{ scale: 1 }}
-							whileHover={{ scale: 1.05 }}
-							transition={{ duration: 0.4 }}
-						/>
+						{video ? (
+							<iframe
+								src={video} // Use the corrected embed URL
+								title={title}
+								className="w-full h-full"
+								frameBorder="0"
+								allow="autoplay; encrypted-media"
+								allowFullScreen
+							></iframe>
+						) : (
+							<motion.img
+								src={src}
+								alt={title}
+								className="w-full h-full object-contain"
+								initial={{ scale: 1 }}
+								whileHover={{ scale: 1.05 }}
+								transition={{ duration: 0.4 }}
+							/>
+						)}
 
 						{/* Colored overlay on hover */}
 						<motion.div
@@ -200,9 +262,9 @@ function Card({
 							transition={{ duration: 0.3 }}
 						/>
 
-						{/* Project number */}
+						{/* Status display */}
 						<div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
-							Project {i + 1}
+							{status}
 						</div>
 					</div>
 
@@ -262,7 +324,8 @@ Card.propTypes = {
 	i: PropTypes.number.isRequired,
 	title: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	src: PropTypes.string.isRequired,
+	src: PropTypes.string, // Make src optional
+	video: PropTypes.string, // Add video as optional
 	color: PropTypes.string.isRequired,
 	progress: PropTypes.object.isRequired,
 	range: PropTypes.array.isRequired,

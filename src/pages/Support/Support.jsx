@@ -55,7 +55,7 @@ const SupportMeSection = () => {
       {/* Section header */}
       <div className="relative text-center mb-16">
         <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text">
-          Support My Vision
+          Support my Vision
         </h2>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
         <p className="mt-6 text-lg md:text-xl text-gray-400 font-medium tracking-wide max-w-2xl mx-auto">
@@ -100,14 +100,14 @@ const SupportMeSection = () => {
         >
           Buy me a Coffee
         </a>
-        {/* <a
-          href="paypal.me/zeitlerdev"
+        <a
+          href="https://www.paypal.me/zeitlerdev"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors"
         >
           Support me via PayPal
-        </a> */}
+        </a>
       </div>
 
       {/* Glowing background effects */}

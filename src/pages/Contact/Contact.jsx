@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Send, Phone, MapPin, Mail, Linkedin, Github, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -285,6 +286,25 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Footer Links */}
+      <footer className="fixed bottom-0 left-0 w-full flex justify-center items-center pb-4 bg-[#04081A] z-50">
+        <div className="text-gray-400 text-sm space-x-4">
+          <Link
+            to="/legalnotice"
+            className="hover:underline hover:text-purple-400 transition-colors"
+          >
+            Legal Notice
+          </Link>
+          <span>|</span>
+          <Link
+            to="/privacypolicy"
+            className="hover:underline hover:text-purple-400 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
