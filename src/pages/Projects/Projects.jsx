@@ -253,15 +253,6 @@ function Card({
 							/>
 						)}
 
-						{/* Colored overlay on hover */}
-						<motion.div
-							className="absolute inset-0"
-							style={{ backgroundColor: color, mixBlendMode: "overlay" }}
-							initial={{ opacity: 0 }}
-							whileHover={{ opacity: 0.3 }}
-							transition={{ duration: 0.3 }}
-						/>
-
 						{/* Status display */}
 						<div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
 							{status}
