@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Send, Phone, MapPin, Mail, Linkedin, Github, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
+  // Always scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

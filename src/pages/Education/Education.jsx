@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EducationLoader from "@/components/ui/EducationLoader";
 import {
   Star,
@@ -11,6 +11,11 @@ import {
 import { motion } from "framer-motion";
 
 const EducationSection = () => {
+  // Always scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const educationData = [

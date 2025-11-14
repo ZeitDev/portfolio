@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
@@ -70,6 +70,11 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
 );
 
 const SkillsSection = () => {
+  // Always scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const skillCategories = [
     {
       icon: GiArtificialIntelligence,

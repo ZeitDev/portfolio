@@ -41,6 +41,11 @@ const GridBackground = () => {
 };
 
 export default function Hero() {
+  // Always scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const words = [
     "Coder by Passion",
     "AI Trainer & LLM Whisperer",
@@ -131,6 +136,16 @@ profile = {
           className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
           style={{ paddingTop: "var(--hero-padding-top, 0)" }}
         >
+          {/* Add extra top padding for mobile */}
+          <style>
+            {`
+              @media (max-width: 640px) {
+                .hero {
+                  padding-top: 5.5rem !important;
+                }
+              }
+            `}
+          </style>
           <div className="absolute inset-0"></div>
 
           {/* Choose one of these background options */}
@@ -176,7 +191,7 @@ profile = {
               {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-                  <span>Hello</span>
+                  <span>Hello </span>
                   <span className="relative inline-block">
                     I&apos;m
                     <span className="typing-effect gradient-text">

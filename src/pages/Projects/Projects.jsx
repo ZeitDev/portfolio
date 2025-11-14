@@ -85,8 +85,7 @@ const projects = [
 		src: stenosisImage,
 		color: "#ed649e",
 		links: [
-			{ name: "GitHub", href: "" },
-			{ name: "Live Demo", href: "" },
+
 		],
 	},
 ];
@@ -97,6 +96,11 @@ export default function Projects() {
 		target: container,
 		offset: ["start start", "end end"],
 	});
+
+	// Fix: Always scroll to top on mount (especially for mobile)
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.04, 0.12, 0.16,
 		 													0.18, 0.22, 0.3, 0.34,

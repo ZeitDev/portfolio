@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 
 const SupportMeSection = () => {
+  // Always scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.setAttribute("data-name", "BMC-Widget");
