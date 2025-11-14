@@ -94,8 +94,8 @@ const SkillsSection = () => {
         { name: "C#", icon: <SiCplusplus className="w-4 h-4 text-[#239120]" /> }, 
         { name: "C++", icon: <SiCplusplus className="w-4 h-4 text-[#00599C]" /> },
         { name: "Matlab", icon: <BsGrid1X2 className="w-4 h-4 text-[#E16737]" /> },
-        { name: "English", icon: <span className="text-lg">🇬🇧</span> },
-        { name: "German", icon: <span className="text-lg">🇩🇪</span> },
+        { name: "English", icon: <span className="text-sm">🇬🇧</span> },
+        { name: "German", icon: <span className="text-sm">🇩🇪</span> },
       ],
     },
     {
