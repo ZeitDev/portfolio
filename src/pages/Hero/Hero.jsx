@@ -56,7 +56,7 @@ export default function Hero() {
 profile = {
     'name': 'Léon Zeitler',
     'title': 'General Engineer Scientist B.Sc.',
-    'current': 'Studying Biomedical Engineering M.Sc. at TUHH',
+    'current': 'Biomedical Engineering M.Sc. at TUHH',
     'skills': [
       'strategic': True
       'gritty': True,

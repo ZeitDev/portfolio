@@ -22,7 +22,10 @@ const slugs = [
   "gemini",
   "robot",
   "vscode",
-  "pydantic"
+  "pydantic",
+  "huggingface",
+  "plotly",
+  "csharp"
 ];
 
 function IconCloudDemo() {

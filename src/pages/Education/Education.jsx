@@ -28,9 +28,9 @@ const EducationSection = () => {
         "Broad foundation in engineering principles, aquiring theoretical knowledge across multiple disciplines.",
     },
     {
-      degree: "M.Sc. Biomedical Engineering",
+      degree: "M.Sc. Biomedical Engineering (ongoing)",
       school: "Hamburg University of Technology",
-      achievements: ['Current Grade: 1.1 (A)', 'Master Thesis: "Simultaneous instrument segmentation and depth estimation for spatial scene understanding in robot-assisted surgery"'],
+      achievements: ['Current Grade: 1.1 (A)'], //, 'Master Thesis: "Simultaneous instrument segmentation and depth estimation for spatial scene understanding in robot-assisted surgery"'],
       skills: ["Intelligent Systems in Medicine", "Robotic and Navigation in Medicine", "Humanoid Robotics", "Cell and Tissue Engineering", "Regenerative Medicine", "Medical Imaging"],
       description:
         "Developed strong analytical and critical thinking skills with various practical projects.",

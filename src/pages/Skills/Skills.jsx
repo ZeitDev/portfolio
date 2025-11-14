@@ -28,7 +28,9 @@ import {
   SiScipy,
   SiScikitlearn,
   SiPandas,
-  SiPydantic
+  SiPydantic,
+  SiHuggingface,
+  SiPlotly
 } from "react-icons/si";
 import { 
   RiGeminiLine 
@@ -89,6 +91,7 @@ const SkillsSection = () => {
       color: "text-red-400",
       skills: [
         { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
+        { name: "C#", icon: <SiCplusplus className="w-4 h-4 text-[#239120]" /> }, 
         { name: "C++", icon: <SiCplusplus className="w-4 h-4 text-[#00599C]" /> },
         { name: "Matlab", icon: <BsGrid1X2 className="w-4 h-4 text-[#E16737]" /> },
         { name: "English", icon: <span className="text-lg">🇬🇧</span> },
@@ -107,6 +110,7 @@ const SkillsSection = () => {
         { name: "NumPy", icon: <SiNumpy className="w-4 h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" /> },
         { name: "SciPy", icon: <SiScipy className="w-4 h-4 text-[#8CAAE6]" /> },
         { name: "scikit-learn", icon: <SiScikitlearn className="w-4 h-4 text-[#F7931E]" /> },
+        { name: "Plotly", icon: <SiPlotly className="w-4 h-4 text-[#3F4F75]" /> }, 
       ],
     },
     {
@@ -114,6 +118,7 @@ const SkillsSection = () => {
       title: "Large Language Models",
       color: "text-blue-400",
       skills: [
+        { name: "Hugging Face", icon: <SiHuggingface className="w-4 h-4 text-[#FFD700]" /> },
         { name: "Gemini", icon: <RiGeminiLine className="w-4 h-4 text-[#0077FF]" /> },
         { name: "Gemma 3n", icon: <RiGeminiLine className="w-4 h-4 text-[#38B2AC]" /> },
         { name: "LangChain", icon: <SiLangchain className="w-4 h-4 text-[#FFD700]" /> },
@@ -128,6 +133,7 @@ const SkillsSection = () => {
         { name: "Unreal Engine", icon: <SiUnrealengine className="w-4 h-4 text-[#FFFFFF]" /> },
         { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
         { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
+        { name: "uv", icon: <SiPython className="w-4 h-4 text-[#3776AB]" /> },
         { name: "Unity", icon: <SiUnity className="w-4 h-4 text-[#FFFFFF]" /> },
         { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
         { name: "LaTeX", icon: <SiLatex className="w-4 h-4 text-[#008080]" /> },
