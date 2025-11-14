@@ -5,6 +5,10 @@ const slugs = [
   "pytorch",
   "mlflow",
   "opencv",
+  "numpy",
+  "scipy",
+  "scikitlearn",
+  "pandas",
   "unrealengine",
   "unity",
   "langchain",
@@ -18,6 +22,7 @@ const slugs = [
   "gemini",
   "robot",
   "vscode",
+  "pydantic"
 ];
 
 function IconCloudDemo() {

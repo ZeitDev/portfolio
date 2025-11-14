@@ -3,9 +3,9 @@ import { Send, Phone, MapPin, Mail, Linkedin, Github, Instagram } from "lucide-r
 import { Link } from "react-router-dom";
 
 export default function Contact() {
-  // Always scroll to top on mount
+  // Scroll to a small offset from the top on mount
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 50); // Adjust 60 to your preferred offset
   }, []);
 
   const [formData, setFormData] = useState({

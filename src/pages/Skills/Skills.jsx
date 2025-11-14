@@ -8,6 +8,8 @@ import {
   FaLinux,
   FaPython,
   FaMicrosoft,
+  FaFlagUsa,
+  FaFlag,
 } from "react-icons/fa";
 import {
   SiMlflow,
@@ -22,6 +24,11 @@ import {
   SiMeta,
   SiCplusplus,
   SiPython,
+  SiNumpy,
+  SiScipy,
+  SiScikitlearn,
+  SiPandas,
+  SiPydantic
 } from "react-icons/si";
 import { 
   RiGeminiLine 
@@ -77,25 +84,55 @@ const SkillsSection = () => {
 
   const skillCategories = [
     {
-      icon: GiArtificialIntelligence,
-      title: "Deep Learning & LLMs",
-      color: "text-indigo-400", // Adjusted color to better fit the theme
+      icon: SiPython,
+      title: "Languages",
+      color: "text-red-400",
       skills: [
-        { name: "PyTorch", icon: <SiPytorch className="w-4 h-4 text-[#EE4C2C]" /> },
-        { name: "MLflow", icon: <SiMlflow className="w-4 h-4 text-[#0194E2]" /> },
-        { name: "OpenCV", icon: <SiOpencv className="w-4 h-4 text-[#5C3EE8]" /> },
-        { name: "Gemini", icon: <RiGeminiLine className="w-4 h-4 text-[#0077FF]" /> },
-        { name: "Gemma 3n", icon: <RiGeminiLine className="w-4 h-4 text-[#38B2AC]" /> },
-        { name: "LangChain", icon: <SiLangchain className="w-4 h-4 text-[#FFD700]" /> },
+        { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
+        { name: "C++", icon: <SiCplusplus className="w-4 h-4 text-[#00599C]" /> },
+        { name: "Matlab", icon: <BsGrid1X2 className="w-4 h-4 text-[#E16737]" /> },
+        { name: "English", icon: <span className="text-lg">🇬🇧</span> },
+        { name: "German", icon: <span className="text-lg">🇩🇪</span> },
       ],
     },
     {
-      icon: Layout,
-      title: "Frameworks",
-      color: "text-purple-400",
+      icon: GiArtificialIntelligence,
+      title: "Deep Learning",
+      color: "text-indigo-400",
+      skills: [
+        { name: "PyTorch", icon: <SiPytorch className="w-4 h-4 text-[#EE4C2C]" /> },
+        { name: "pandas", icon: <SiPandas className="w-4 h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" /> },
+        { name: "MLflow", icon: <SiMlflow className="w-4 h-4 text-[#0194E2]" /> },
+        { name: "OpenCV", icon: <SiOpencv className="w-4 h-4 text-[#5C3EE8]" /> },
+        { name: "NumPy", icon: <SiNumpy className="w-4 h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" /> },
+        { name: "SciPy", icon: <SiScipy className="w-4 h-4 text-[#8CAAE6]" /> },
+        { name: "scikit-learn", icon: <SiScikitlearn className="w-4 h-4 text-[#F7931E]" /> },
+      ],
+    },
+    {
+      icon: Brain,
+      title: "Large Language Models",
+      color: "text-blue-400",
+      skills: [
+        { name: "Gemini", icon: <RiGeminiLine className="w-4 h-4 text-[#0077FF]" /> },
+        { name: "Gemma 3n", icon: <RiGeminiLine className="w-4 h-4 text-[#38B2AC]" /> },
+        { name: "LangChain", icon: <SiLangchain className="w-4 h-4 text-[#FFD700]" /> },
+        { name: "Pydantic", icon: <SiPydantic className="w-4 h-4 text-[#306998]" /> },
+      ],
+    },
+    {
+      icon: Cpu,
+      title: "Tools",
+      color: "text-pink-400",
       skills: [
         { name: "Unreal Engine", icon: <SiUnrealengine className="w-4 h-4 text-[#FFFFFF]" /> },
+        { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
+        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "Unity", icon: <SiUnity className="w-4 h-4 text-[#FFFFFF]" /> },
+        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
+        { name: "LaTeX", icon: <SiLatex className="w-4 h-4 text-[#008080]" /> },
+        { name: "Blender", icon: <SiBlender className="w-4 h-4 text-[#F5792A]" /> },
+        { name: "ROS", icon: <SiRos className="w-4 h-4 text-[#22314E]" /> },
       ],
     },
     {
@@ -108,29 +145,6 @@ const SkillsSection = () => {
         { name: "Azure Kinect", icon: <FaMicrosoft className="w-4 h-4 text-[#0078D7]" /> },
         { name: "Universal Robot", icon: <GiRobotGrab className="w-4 h-4 text-[#FFD700]" /> },
         { name: "Franka Emika Panda Robot", icon: <GiRobotGrab className="w-4 h-4 text-[#FF5733]" /> },
-      ],
-    },
-    {
-      icon: SiPython,
-      title: "Languages",
-      color: "text-red-400",
-      skills: [
-        { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
-        { name: "C++", icon: <SiCplusplus className="w-4 h-4 text-[#00599C]" /> },
-        { name: "Matlab", icon: <BsGrid1X2 className="w-4 h-4 text-[#E16737]" /> },
-      ],
-    },
-    {
-      icon: Cpu,
-      title: "Tools",
-      color: "text-pink-400",
-      skills: [
-        { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
-        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
-        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
-        { name: "LaTeX", icon: <SiLatex className="w-4 h-4 text-[#008080]" /> },
-        { name: "Blender", icon: <SiBlender className="w-4 h-4 text-[#F5792A]" /> },
-        { name: "ROS", icon: <SiRos className="w-4 h-4 text-[#22314E]" /> },
       ],
     },
     {
