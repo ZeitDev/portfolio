@@ -103,18 +103,20 @@ export default function Projects() {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.06, 0.12, 0.16,
-		 													0.18, 0.24, 0.3, 0.34,
-															0.36, 0.38, 0.44, 0.48,
-															0.50, 0.56, 0.60, 0.64,
-															0.66, 0.72, 0.76, 0.80,
-															0.82, 0.88, 1],
-															[1, 0, 0, 1,
-															1, 0, 0, 1,
-															1, 0, 0, 1,
-															1, 0, 0, 1,
-															1, 0, 0, 1, 
-															1, 0, 0]); // Added a fade-out range after the second card
+	// const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.06, 0.12, 0.16,
+	// 	 													0.18, 0.24, 0.3, 0.34,
+	// 														0.36, 0.38, 0.44, 0.48,
+	// 														0.50, 0.56, 0.60, 0.64,
+	// 														0.66, 0.72, 0.76, 0.80,
+	// 														0.82, 0.88, 1],
+	// 														[1, 0, 0, 1,
+	// 														1, 0, 0, 1,
+	// 														1, 0, 0, 1,
+	// 														1, 0, 0, 1,
+	// 														1, 0, 0, 1, 
+	// 														1, 0, 0]); // Added a fade-out range after the second card
+	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.75, 0.75, 1], [1, 1, 1, 0]); // Added a fade-out range after the second card
+												
 
 	useEffect(() => {
 		// Add specific styles for 1366x768 resolution
@@ -169,14 +171,39 @@ export default function Projects() {
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="text-center mb-0 relative z-10"
+						className="text-center mb-0 md:mb-0 relative z-10"
 					>
 						<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
 							My Projects
 						</h2>
-						<p className="text-gray-300 max-w-2xl mx-auto text-lg">
+						<p className="text-gray-300 max-w-2xl mx-auto text-lg mb-16 md:mb-0">
 							A showcase of my work, from AI research to software development and beyond.
 						</p>
+					</motion.div>
+					<motion.div
+						className="fixed bottom-10 left-1/2 -translate-x-1/2 z-0 pointer-events-none"
+						style={{ opacity: indicatorOpacity }}
+					>
+						<div className="animate-bounce flex flex-col items-center gap-2">
+							<span className="text-gray-400 text-center flex items-center justify-center gap-2 text-lg md:text-xl">
+								<i className="fas fa-mouse text-blue-400"></i>
+								Scroll down to learn more
+							</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="w-10 h-10 text-blue-400"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+								/>
+							</svg>
+						</div>
 					</motion.div>
 					{projects.map((project, i) => {
 						const targetScale = 1 - (projects.length - i) * 0.05;
@@ -192,36 +219,13 @@ export default function Projects() {
 								progress={scrollYProgress}
 								range={[i * 0.25, 1]}
 								targetScale={targetScale}
-								links={project.links} // Pass links to Card
-								src={project.src} // Pass src to Card
-								video={project.video} // Pass video to Card
+								links={project.links}
+								src={project.src}
+								video={project.video}
 							/>
 						);
 					})}
 				</section>
-				<motion.div
-					className="sticky bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2"
-					style={{ opacity: indicatorOpacity }}
-				>
-					<span className="text-gray-400 text-center flex items-center justify-center gap-2 text-lg md:text-xl">
-						<i className="fas fa-mouse text-blue-400"></i>
-						Scroll down to learn more
-					</span>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth={1.5}
-						stroke="currentColor"
-						className="w-10 h-10 text-blue-400"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-						/>
-					</svg>
-				</motion.div>
 			</main>
 		</ReactLenis>
 	);
@@ -232,13 +236,13 @@ function Card({
 	status,
 	title,
 	description,
-	src, // Use src for the image path
-	video, // Add video property
+	src,
+	video,
 	color,
 	progress,
 	range,
 	targetScale,
-	links, // Replace githubLink and liveLink with links
+	links,
 }) {
 	const container = useRef(null);
 	const scale = useTransform(progress, range, [1, targetScale]);
@@ -246,7 +250,7 @@ function Card({
 	return (
 		<div
 			ref={container}
-			className="h-screen flex items-center justify-center sticky top-0 project-container"
+			className="h-screen flex items-center justify-center sticky top-0 project-container z-10"
 		>
 			<motion.div
 				style={{

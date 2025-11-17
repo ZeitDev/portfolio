@@ -37,7 +37,7 @@ const SupportMeSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b relative overflow-hidden pt-32"> {/* Ensure consistent pt-32 */}
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b relative overflow-hidden pt-32">
       <ShimmeringBackground />
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -55,8 +55,8 @@ const SupportMeSection = () => {
       </motion.div>
 
       {/* Section content */}
-      <div className="relative text-center mb-16">
-        <p className="mt-6 text-lg md:text-xl text-gray-400 font-medium tracking-wide max-w-2xl mx-auto">
+      <div className="relative text-center mb-16 max-w-3xl mx-auto">
+        <p className="mt-6 text-lg md:text-xl text-gray-400 font-medium tracking-wide">
           I'm driven by a deep curiosity for technology. To me, coding feels like
           magic. I love the process of building things from scratch — taking an
           idea and turning it into something real that can help people. This

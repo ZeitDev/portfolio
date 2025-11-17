@@ -1,0 +1,10 @@
+.page-title {
+  /* ...existing styles... */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    margin-top: 10px; /* Ensure consistent alignment on mobile */
+  }
+}

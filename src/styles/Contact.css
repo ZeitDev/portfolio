@@ -1,0 +1,9 @@
+section {
+  /* ...existing styles... */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 20px; /* Adjust top padding for mobile */
+  }
+}
