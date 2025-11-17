@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-python";
 import "@/assets/css/tomorrow.css";
@@ -6,6 +6,7 @@ import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
@@ -41,6 +42,14 @@ const GridBackground = () => {
 };
 
 export default function Hero() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end start"],
+  });
+
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   // Always scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,8 +64,8 @@ export default function Hero() {
   const [code] = useState(`
 profile = {
     'name': 'Léon Zeitler',
-    'title': 'General Engineer Scientist B.Sc.',
-    'current': 'Biomedical Engineering M.Sc. at TUHH',
+    'title': 'B.Sc. General Engineering Science',
+    'current': 'M.Sc. Biomedical Engineering Science at TUHH',
     'skills': [
       'strategic': True
       'gritty': True,
@@ -131,7 +140,7 @@ profile = {
 
   return (
     <>
-      <main className="bg-[#020617] text-white min-h-screen">
+      <main ref={container} className="bg-[#020617] text-white min-h-screen">
         <section
           className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
           style={{ paddingTop: "var(--hero-padding-top, 0)" }}
@@ -293,13 +302,29 @@ profile = {
         </section>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2">
-					<span className="text-gray-400 flex items-center justify-center gap-2 -ml-20">
+        <motion.div
+          style={{ opacity: indicatorOpacity }}
+          className="sticky bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2"
+        >
+          <span className="text-gray-400 text-center flex items-center justify-center gap-2 text-lg md:text-xl">
             <i className="fas fa-mouse text-blue-400"></i>
             Scroll down to learn more
           </span>
-          <i className="fas fa-chevron-down text-blue-400 text-xl"></i>
-        </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-10 h-10 text-blue-400"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+            />
+          </svg>
+        </motion.div>
         <PortfolioPage />
       </main>
     </>

@@ -10,6 +10,7 @@ import cvguidedroboticImage from "../../assets/images/cvguidedrobotic.png";
 import stenosisImage from "../../assets/images/stenosis.png";
 import healthGemImage from "../../assets/images/HealthGem.png";
 import masterImage from "../../assets/images/frame228.png";
+import ShimmeringBackground from "../../components/ShimmeringBackground/ShimmeringBackground";
 
 const projects = [
 	{
@@ -102,12 +103,12 @@ export default function Projects() {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.04, 0.12, 0.16,
-		 													0.18, 0.22, 0.3, 0.34,
-															0.36, 0.4, 0.48, 0.52,
-															0.54, 0.58, 0.66, 0.7,
-															0.72, 0.76, 0.84, 0.88,
-															0.9, 0.94, 1],
+	const indicatorOpacity = useTransform(scrollYProgress,  [0, 0.06, 0.12, 0.16,
+		 													0.18, 0.24, 0.3, 0.34,
+															0.36, 0.38, 0.44, 0.48,
+															0.50, 0.56, 0.60, 0.64,
+															0.66, 0.72, 0.76, 0.80,
+															0.82, 0.88, 1],
 															[1, 0, 0, 1,
 															1, 0, 0, 1,
 															1, 0, 0, 1,
@@ -162,7 +163,21 @@ export default function Projects() {
 	return (
 		<ReactLenis root>
 			<main className="bg-black" ref={container}>
-				<section className="text-white w-full bg-slate-950">
+				<section className="text-white w-full bg-slate-950 pt-32 relative">
+					<ShimmeringBackground />
+					<motion.div
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						className="text-center mb-0 relative z-10"
+					>
+						<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
+							My Projects
+						</h2>
+						<p className="text-gray-300 max-w-2xl mx-auto text-lg">
+							A showcase of my work, from AI research to software development and beyond.
+						</p>
+					</motion.div>
 					{projects.map((project, i) => {
 						const targetScale = 1 - (projects.length - i) * 0.05;
 						return (
@@ -188,11 +203,24 @@ export default function Projects() {
 					className="sticky bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2"
 					style={{ opacity: indicatorOpacity }}
 				>
-					<span className="text-gray-400 flex items-center justify-center gap-2 -ml-20">
+					<span className="text-gray-400 text-center flex items-center justify-center gap-2 text-lg md:text-xl">
 						<i className="fas fa-mouse text-blue-400"></i>
-						Scroll down to see more
+						Scroll down to learn more
 					</span>
-					<i className="fas fa-chevron-down text-blue-400 text-xl"></i>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-10 h-10 text-blue-400"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+						/>
+					</svg>
 				</motion.div>
 			</main>
 		</ReactLenis>
@@ -223,7 +251,7 @@ function Card({
 			<motion.div
 				style={{
 					scale,
-					top: `calc(-5vh + ${i * 25}px)`,
+					top: `calc(-20vh + ${i * 25}px)`,
 					transform: `scale(var(--project-scale, 1))`,
 					marginTop: "var(--project-margin, 0)",
 				}}

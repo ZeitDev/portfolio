@@ -46,6 +46,10 @@ export default function Header() {
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
 
+  const currentPageText = navLinks.find(link => link.id === activeLink)?.text || 'Home';
+  const currentPageIndex = navLinks.findIndex(link => link.id === activeLink);
+  const totalPages = navLinks.length;
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
       <div className="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
@@ -53,7 +57,9 @@ export default function Header() {
           <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
-              <Link to="/" className="text-white font-bold">Portfolio</Link>
+              <Link to="/" className="text-white font-bold">
+                Portfolio - {currentPageText} ({currentPageIndex >= 0 ? currentPageIndex + 1 : 1}/{totalPages})
+              </Link>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"

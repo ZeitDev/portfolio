@@ -45,6 +45,8 @@ import {
 import { TbBrandVscode } from "react-icons/tb";
 import { BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
+import { motion } from "framer-motion";
+import ShimmeringBackground from "../../components/ShimmeringBackground/ShimmeringBackground";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
@@ -169,15 +171,29 @@ const SkillsSection = () => {
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
+    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative overflow-hidden">
+      <ShimmeringBackground />
       {/* Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
-      <section className="container mx-auto px-4 py-11 relative z-10">
-        <div className="flex justify-center items-center ">
+      <section className="container mx-auto px-4 py-11 relative z-10 pt-32">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-0"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
+            Expertise
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Explore the tools, technologies, and skills that power my projects and ideas.
+          </p>
+        </motion.div>
+        <div className="flex justify-center items-center mb-0"> {/* Added mb-16 */}
           <IconCloudDemo />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skillCategories.map((category, index) => (
             <SkillCard
               key={index}

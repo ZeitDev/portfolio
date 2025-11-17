@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Send, Phone, MapPin, Mail, Linkedin, Github, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import ShimmeringBackground from "../../components/ShimmeringBackground/ShimmeringBackground";
 
 export default function Contact() {
   // Scroll to a small offset from the top on mount
@@ -93,32 +95,39 @@ export default function Contact() {
   };
 
   return (
-    <main
-      className="pt-20 lg:pt-[0rem] bg-[#04081A]
- text-white min-h-screen"
-    >
-      <section className="hero min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto flex flex-col items-center">
-          <div className="relative text-center mb-16">
+    <main className="pt-20 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen">
+      <section className="hero min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 pt-32"> {/* Adjusted justify-start */}
+        <div className="container mx-auto flex flex-col items-center"> {/* Added flex and items-center */}
+          <ShimmeringBackground />
+          <div className="relative z-10 text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-8"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+                Feel free to connect with me!
+              </p>
+            </motion.div>
             {/* Contact Info */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Get in Touch
-                </h2>
-                <p className="text-gray-300 text-lg">
-                  Feel free to connect with me!
-                </p>
-              </div>
-
-              <div className="space-y-6 flex flex-col items-start w-full max-w-lg">
-                <div className="flex items-center space-x-4 w-full">
-                  <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">
+              <div className="space-y-6 flex flex-col items-center w-full max-w-lg"> {/* Adjusted items-start to items-center */}
+                <div className="flex items-center w-full space-x-4">
+                  <a
+                    href="mailto:contact@leonzeitler.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-purple-500/10 p-4 rounded-lg h-16 w-16"
+                  >
+                    <Mail className="w-8 h-8 text-teal-400" />
+                  </a>
+                  <div className="text-left w-full">
+                    <h3 className="font-semibold text-lg">Email</h3>
+                    <p className="text-gray-400 text-base">
                       <a
                         href="mailto:contact@leonzeitler.com"
                         target="_blank"
@@ -130,13 +139,18 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 w-full">
-                  <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Linkedin className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold">LinkedIn</h3>
-                    <p className="text-gray-400">
+                <div className="flex items-center w-full space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/l%C3%A9on-zeitler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-purple-500/10 p-4 rounded-lg h-16 w-16"
+                  >
+                    <Linkedin className="w-8 h-8 text-teal-400" />
+                  </a>
+                  <div className="text-left w-full">
+                    <h3 className="font-semibold text-lg">LinkedIn</h3>
+                    <p className="text-gray-400 text-base">
                       <a
                         href="https://www.linkedin.com/in/l%C3%A9on-zeitler"
                         target="_blank"
@@ -148,13 +162,18 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 w-full">
-                  <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Github className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold">GitHub</h3>
-                    <p className="text-gray-400">
+                <div className="flex items-center w-full space-x-4">
+                  <a
+                    href="https://github.com/ZeitDev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-purple-500/10 p-4 rounded-lg h-16 w-16"
+                  >
+                    <Github className="w-8 h-8 text-teal-400" />
+                  </a>
+                  <div className="text-left w-full">
+                    <h3 className="font-semibold text-lg">GitHub</h3>
+                    <p className="text-gray-400 text-base">
                       <a
                         href="https://github.com/ZeitDev"
                         target="_blank"
@@ -166,13 +185,18 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 w-full">
-                  <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Instagram className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-semibold">Instagram</h3>
-                    <p className="text-gray-400">
+                <div className="flex items-center w-full space-x-4">
+                  <a
+                    href="https://www.instagram.com/zeitler.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-purple-500/10 p-4 rounded-lg h-16 w-16"
+                  >
+                    <Instagram className="w-8 h-8 text-teal-400" />
+                  </a>
+                  <div className="text-left w-full">
+                    <h3 className="font-semibold text-lg">Instagram</h3>
+                    <p className="text-gray-400 text-base">
                       <a
                         href="https://www.instagram.com/zeitler.dev"
                         target="_blank"
@@ -186,108 +210,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Contact Form */}
-            {/* <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.name ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Your Email"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.email ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                    />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.subject ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
-                      value={formData.subject}
-                      onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
-                      }
-                    />
-                    {errors.subject && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.subject}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <textarea
-                      placeholder="Your Message"
-                      rows="4"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.message ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors resize-none`}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                    ></textarea>
-                    {errors.message && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
-
-              {/* Status Message }
-              {status && (
-                <div
-                  className={`mt-4 text-center ${
-                    status.includes("success")
-                      ? "text-green-400"
-                      : "text-red-400"
-                  }`}
-                >
-                  <p>{status}</p>
-                </div>
-              )}
-            </div> */}
           </div>
         </div>
       </section>
