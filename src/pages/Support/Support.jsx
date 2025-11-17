@@ -37,7 +37,7 @@ const SupportMeSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b relative overflow-hidden pt-32">
+    <section className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b relative overflow-hidden pt-32 pb-16">
       <ShimmeringBackground />
       <motion.div
         initial={{ opacity: 0, y: -20 }}

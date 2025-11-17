@@ -95,8 +95,8 @@ export default function Contact() {
   };
 
   return (
-    <main className="pt-20 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen">
-      <section className="flex flex-col items-center justify-center bg-gradient-to-b relative overflow-hidden pt-12 pb-16 md:pt-32">
+    <main className="bg-[#04081A] text-white min-h-screen flex flex-col">
+      <section className="flex flex-col items-center justify-start bg-gradient-to-b relative overflow-hidden pt-32 pb-16 flex-grow">
         <ShimmeringBackground />
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -211,7 +211,7 @@ export default function Contact() {
       </section>
 
       {/* Footer Links */}
-      <footer className="fixed bottom-0 left-0 w-full flex justify-center items-center pb-4 bg-[#04081A] z-50">
+      <footer className="w-full flex justify-center items-center py-8 bg-[#04081A] z-50 mt-auto">
         <div className="text-gray-400 text-sm space-x-4">
           <Link
             to="/legalnotice"
