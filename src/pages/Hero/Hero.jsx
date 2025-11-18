@@ -48,7 +48,7 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
 
   // Always scroll to top on mount
   useEffect(() => {
