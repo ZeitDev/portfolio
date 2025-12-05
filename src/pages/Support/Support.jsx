@@ -73,9 +73,9 @@ const SupportMeSection = () => {
           <br />
           Your support helps me dedicate more time and resources to these
           projects. Every contribution fuels new ideas and helps cover the costs
-          of development — like electricity for my PC, new tech to experiment
-          with, framework costs, or buying 3D assets (because trust me, you don't
-          want to see my modeling skills).
+          of development — like electricity, the Apple developer fee, new tech to
+          experiment with, framework costs, or buying 3D assets (because trust me,
+          you don't want to see my modeling skills).
           <br />
           <br />
           And, of course, it keeps me supplied with coffee for those late-night

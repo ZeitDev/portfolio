@@ -67,12 +67,12 @@ profile = {
     'title': 'B.Sc. General Engineering Science',
     'current': 'M.Sc. Biomedical Engineering Science at TUHH',
     'skills': [
-      'strategic': True
+      'creative': True,
+      'curious': True
+      'strategic': True,
       'gritty': True,
-      'inquisitive': True,
-      'thorough': True,
-      'holistic': True,
-      'collaborative': True
+      'tech-savvy': True,
+      'self-improvement': True
     ]
 }
   `);
