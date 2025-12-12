@@ -43,7 +43,7 @@ export default function Header() {
        text: "Support",
       path: "/support",
      },
-    { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
+    { id: "contact", icon: FaEnvelope, text: "Connect", path: "/contact" },
   ];
 
   const currentPageText = navLinks.find(link => link.id === activeLink)?.text || 'Home';

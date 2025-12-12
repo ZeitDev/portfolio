@@ -206,6 +206,31 @@ export default function Contact() {
                 </p>
               </div>
             </div>
+            <div className="flex items-center justify-start w-full space-x-4">
+              <a
+                href="https://www.kaggle.com/leonzeitler"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center bg-purple-500/10 p-4 rounded-lg h-16 w-16"
+              >
+                <span className="text-teal-400 text-2xl font-semibold leading-none w-8 h-8 flex items-center justify-center">
+                  k
+                </span>
+              </a>
+              <div className="text-left w-full">
+                <h3 className="font-semibold text-lg">Kaggle</h3>
+                <p className="text-gray-400 text-base">
+                  <a
+                    href="https://www.kaggle.com/leonzeitler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    kaggle.com/leonzeitler
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

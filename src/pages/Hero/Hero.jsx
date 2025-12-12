@@ -64,16 +64,20 @@ export default function Hero() {
   const [code] = useState(`
 profile = {
     'name': 'Léon Zeitler',
-    'title': 'B.Sc. General Engineering Science',
-    'current': 'M.Sc. Biomedical Engineering Science at TUHH',
-    'skills': [
+    'currently': 'working on my master thesis',
+    'interests': [
+      'deep learning',
+      'large language models',
+      'game engines'
+    ],
+    'skills': {
       'creative': True,
-      'curious': True
+      'curious': True,
       'strategic': True,
       'gritty': True,
       'tech-savvy': True,
       'self-improvement': True
-    ]
+    }
 }
   `);
 

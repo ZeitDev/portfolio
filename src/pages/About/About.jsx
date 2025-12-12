@@ -24,7 +24,7 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                I'm a Biomedical Engineering Master's student at the Hamburg University of Technology (TUHH), driven by a passion for building at the intersection of Large Language Models, Deep Learning, Virtual Reality and Robotics.
+                I'm a Biomedical Engineering Master's student at the Hamburg University of Technology (TUHH), driven by a passion for building at the intersection of Large Language Models, Deep Learning and Game Engines
               </p>
               <p className="text-white">
                 My fascination with code comes from its power to translate complex ideas into functional reality. This passion drives my work — from academic research to personal projects — where I explore new ways to create intelligent, interactive, and helpful systems.
