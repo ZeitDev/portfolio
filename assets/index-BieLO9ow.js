@@ -169,7 +169,7 @@ profile = {
     ],
     'skills': {
       'creative': True,
-      'curious': True
+      'curious': True,
       'strategic': True,
       'gritty': True,
       'tech-savvy': True,
