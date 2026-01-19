@@ -64,7 +64,7 @@ export default function Hero() {
   const [code] = useState(`
 profile = {
     'name': 'Léon Zeitler',
-    'currently': 'working on my master thesis',
+    'current': 'working on my thesis',
     'interests': [
       'deep learning',
       'large language models',
@@ -75,8 +75,7 @@ profile = {
       'curious': True,
       'strategic': True,
       'gritty': True,
-      'tech-savvy': True,
-      'self-improvement': True
+      'versatile': True
     }
 }
   `);

@@ -24,16 +24,16 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                I'm a Biomedical Engineering Master's student at the Hamburg University of Technology (TUHH), driven by a passion for building at the intersection of Large Language Models, Deep Learning and Game Engines
+                I'm a Biomedical Engineering Master's student at the Hamburg University of Technology (TUHH), driven by a passion for building at the intersection of Generative AI and Simulation Engines
               </p>
               <p className="text-white">
-                My fascination with code comes from its power to translate complex ideas into functional reality. This passion drives my work — from academic research to personal projects — where I explore new ways to create intelligent, interactive, and helpful systems.
+                My fascination with code comes from its power to translate complex ideas into functional reality. This passion drives my work - from academic research to personal projects - where I explore new ways to create intelligent, interactive, and helpful systems.
               </p>
               <p className="text-white">
-                 As a solutions-oriented and highly versatile engineer, I'm always looking for the next hard problem to solve.
+                 As a solutions-oriented and highly versatile engineer, I'm always looking for the next hard challenge to tackle.
               </p>
               <p className="text-white">
-                When I'm offline, you can find me bouldering, cycling, or diving into a good sci-fi novel — usually while listening to music, especially from Hiroyuki Sawano.
+                When I'm offline, you can find me bouldering, cycling, diving into a good sci-fi novel or gaming - usually while listening to music, especially from Hiroyuki Sawano.
               </p>
               <p className="text-white">
                 Feel free to browse my projects and get in touch!

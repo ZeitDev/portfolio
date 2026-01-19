@@ -91,14 +91,6 @@ const SupportMeSection = () => {
       {/* Buy Me a Coffee and PayPal Donation Buttons */}
       <div className="relative z-10 flex flex-col md:flex-row justify-center items-center w-full px-6 space-y-4 md:space-y-0 md:space-x-4">
         <a
-          href="https://www.buymeacoffee.com/zeitler"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 transition-colors"
-        >
-          Buy me a Coffee
-        </a>
-        <a
           href="https://www.paypal.me/zeitlerdev"
           target="_blank"
           rel="noopener noreferrer"

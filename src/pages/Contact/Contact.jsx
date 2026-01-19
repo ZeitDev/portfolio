@@ -155,7 +155,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    linkedin.com/in/l%C3%A9on-zeitler/
+                    linkedin.com/in/léon-zeitler
                   </a>
                 </p>
               </div>

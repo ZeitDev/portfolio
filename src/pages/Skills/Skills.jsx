@@ -164,8 +164,7 @@ const SkillsSection = () => {
         { name: "Curious", icon: <MdAnimation className="w-4 h-4 text-[#69F0AE]" /> },
         { name: "Strategic", icon: <MdAnimation className="w-4 h-4 text-[#B388FF]" /> },
         { name: "Gritty", icon: <MdAnimation className="w-4 h-4 text-[#FF80AB]" /> },
-        { name: "Teach-Savvy", icon: <MdAnimation className="w-4 h-4 text-[#69F0AE]" /> },
-        { name: "Self-Improvement", icon: <MdAnimation className="w-4 h-4 text-[#B388FF]" /> },
+        { name: "Versatile", icon: <MdAnimation className="w-4 h-4 text-[#69F0AE]" /> }
       ],
     },
   ];

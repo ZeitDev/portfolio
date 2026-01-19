@@ -11,10 +11,34 @@ import stenosisImage from "../../assets/images/stenosis.png";
 import healthGemImage from "../../assets/images/HealthGem.png";
 import masterImage from "../../assets/images/frame228.png";
 import ShimmeringBackground from "../../components/ShimmeringBackground/ShimmeringBackground";
+import BlueprintArchitect from "../../assets/images/blueprintarchitect.png";
 
 const projects = [
 	{
 		status: "Active",
+		title: "Masterthesis: Spatial Scene Understanding in robot-assisted Surgery",
+		description:
+		"Developing a Multi-Teacher, Multi-Task deep learning framework to simultaneously perform surgical instrument segmentation and depth estimation of the scene.",
+		src: masterImage,
+		color: "#4cafb5", // Adjusted to a teal shade
+		links: [
+			//{ name: "Github", href: "https://github.com/ZeitDev/SIDE" },
+		],
+	},
+		{
+		status: "Finished",
+		title: "Blueprint Architect for Unreal Engine",
+		description:
+			"With game engines becoming crucial for digital twins and simulators, researchers can offload routine logic generation to Gemini, allowing them to focus on core scientific objectives.",
+		src: BlueprintArchitect,
+		color: "#8f89ff",
+		links: [
+			{ name: "Kaggle Writeup", href: "https://www.kaggle.com/competitions/gemini-3/writeups/blueprint-architect-for-unreal-engine" },
+			{ name: "Youtube", href: "https://youtu.be/Wcv0kBwMArc" },
+		],
+	},
+	{
+		status: "Finished",
 		title: "Aerial Camera Simulator",
 		description:
 			"Developed a simulator for the 3D moving cable-suspended camera system, commonly used at sporting events like soccer for unique perspectives. Mastering the control of these systems demands significant practice and coordination in a very dynamic environment.",
@@ -25,17 +49,6 @@ const projects = [
 		],
 	},
 	{
-		status: "Active",
-		title: "Spatial Scene Understanding in robot-assisted Surgery",
-		description:
-			"Developing a Multi-Teacher, Multi-Task deep learning framework to simultaneously perform surgical instrument segmentation and depth estimation of the scene.",
-		src: masterImage,
-		color: "#4cafb5", // Adjusted to a teal shade
-		links: [
-			//{ name: "Github", href: "https://github.com/ZeitDev/SIDE" },
-		],
-	},
-	{
 		status: "Finished",
 		title: "HealthGem - Personalized Medical Diary",
 		description:
@@ -43,7 +56,7 @@ const projects = [
 		src: healthGemImage,
 		color: "#8f89ff",
 		links: [
-			{ name: "Kaggle (Full Writeup)", href: "https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/healthgem-a-personalized-medical-diary" }
+			{ name: "Kaggle Writeup", href: "https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/healthgem-a-personalized-medical-diary" }
 		],
 	},
 	{

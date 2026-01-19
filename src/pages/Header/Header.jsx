@@ -37,12 +37,12 @@ export default function Header() {
       text: "Education",
       path: "/education",
     },
-     {
-       id: "Support",
-       icon: FaHeart,
-       text: "Support",
-      path: "/support",
-     },
+    //  {
+    //    id: "Support",
+    //    icon: FaHeart,
+    //    text: "Support",
+    //   path: "/support",
+    //  },
     { id: "contact", icon: FaEnvelope, text: "Connect", path: "/contact" },
   ];
 
